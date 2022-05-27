@@ -7,9 +7,9 @@ pipeline {
             steps {
                 dir ('exchange-cli') {
                     sh "npm install"
+                }
             }
         }
-    }
         stage ('Build') {
             steps {
                 dir ('exchange-cli') {
@@ -17,7 +17,6 @@ pipeline {
                 }    
             }
         }
-    }
         stage ('Unit Tests') {
             steps {
                 dir ('exchange-cli') {
